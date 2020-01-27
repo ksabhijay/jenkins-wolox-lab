@@ -1,6 +1,6 @@
 config:
-    dockerfile: .woloxci/Dockerfile
-    project_name: some-dotnet-project
+  dockerfile: .woloxci/Dockerfile
+  project_name: some-dotnet-project
 
   steps:
     # analysis:
