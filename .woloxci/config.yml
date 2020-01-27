@@ -8,12 +8,16 @@ services:
 steps:
   analysis:
     - echo analysis
+    - sleep 10
   setup_db:
     - echo setup db
+    - sleep 10
   test:
     - dotnet test
+    - sleep 10
   security:
     - echo security
+    - sleep 10
   audit:
     - echo audit
     - sleep 10
@@ -22,5 +26,3 @@ environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   NUGET_XMLDOC_MODE: skip
   LANG: C.UTF-8
-
-timeout: 600
