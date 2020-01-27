@@ -1,6 +1,13 @@
 config:
   dockerfile: .woloxci/Dockerfile
-  project_name: some-dotnet-project
+  project_name: wolox-lab-dotnet
+
+  environment:
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    NUGET_XMLDOC_MODE: skip
+    LANG: C.UTF-8
+
+  timeout: 600
 
   steps:
     analysis:
@@ -15,10 +22,3 @@ config:
     #   - bundle exec brakeman --exit-on-error
     audit:
     #   - bundle audit check --update
-
-  environment:
-    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-    NUGET_XMLDOC_MODE: skip
-    LANG: C.UTF-8
-
-  timeout: 600
