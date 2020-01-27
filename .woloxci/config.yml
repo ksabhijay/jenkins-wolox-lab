@@ -2,8 +2,8 @@ config:
   dockerfile: .woloxci/Dockerfile
   project_name: wolox-lab-dotnet
 
-services:
-  - redis
+# services:
+#   - redis
 
 steps:
   analysis:
