@@ -2,20 +2,11 @@ config:
   dockerfile: .woloxci/Dockerfile
   project_name: wolox-lab-dotnet
 
-# services:
-#   - postgres
-#   - redis
+services:
+  - postgres
 
 steps:
-  analysis:
-    - dotnet --version
-  setup_db:
-    - dotnet --version
-  test:
-    - dotnet --version
-  security:
-    - dotnet --version
-  audit:
+  show_dotnet_version:
     - dotnet --version
 
 environment:
