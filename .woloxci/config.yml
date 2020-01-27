@@ -16,6 +16,7 @@ steps:
     - echo security
   audit:
     - echo audit
+    - sleep 10
 
 environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
