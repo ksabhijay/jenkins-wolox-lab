@@ -3,17 +3,17 @@ config:
   project_name: some-dotnet-project
 
   steps:
-    # analysis:
+    analysis:
     #   - bundle exec rubocop -R app spec --format simple
     #   - bundle exec rubycritic --path ./analysis --minimum-score 80 --no-browser
-    # setup_db:
+    setup_db:
     #   - bundle exec rails db:create
     #   - bundle exec rails db:schema:load
     test:
       - dotnet test
-    # security:
+    security:
     #   - bundle exec brakeman --exit-on-error
-    # audit:
+    audit:
     #   - bundle audit check --update
 
   environment:
