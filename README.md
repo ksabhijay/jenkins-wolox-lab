@@ -2,6 +2,10 @@
 
 jenksin X wolox-ci
 
+## Jenkins for this project
+
+> https://github.com/guitarrapc/jenkins-lab/tree/master/wolox
+
 ## Project reference
 
 https://github.com/Wolox/rails-bootstrap

@@ -1,24 +1,25 @@
 config:
   dockerfile: .woloxci/Dockerfile
-  project_name: some-dotnet-project
+  project_name: wolox-lab-dotnet
 
-  steps:
-    analysis:
-    #   - bundle exec rubocop -R app spec --format simple
-    #   - bundle exec rubycritic --path ./analysis --minimum-score 80 --no-browser
-    setup_db:
-    #   - bundle exec rails db:create
-    #   - bundle exec rails db:schema:load
-    test:
-      - dotnet test
-    security:
-    #   - bundle exec brakeman --exit-on-error
-    audit:
-    #   - bundle audit check --update
+services:
+  - redis
 
-  environment:
-    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-    NUGET_XMLDOC_MODE: skip
-    LANG: C.UTF-8
+steps:
+  analysis:
+    - echo analysis
+  setup_db:
+    - echo setup db
+  test:
+    - dotnet test
+  security:
+    - echo security
+  audit:
+    - echo audit
 
-  timeout: 600
+environment:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  NUGET_XMLDOC_MODE: skip
+  LANG: C.UTF-8
+
+timeout: 600
