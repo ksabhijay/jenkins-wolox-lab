@@ -1,4 +1,4 @@
-@Library('wolox-ci') _
+@Library('wolox-ci@development') _
 
 node {
   checkout scm

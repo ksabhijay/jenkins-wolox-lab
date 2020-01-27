@@ -2,6 +2,10 @@
 
 jenksin X wolox-ci
 
+## Project reference
+
+https://github.com/Wolox/rails-bootstrap
+
 ## docker build
 
 ```shell
