@@ -1,13 +1,13 @@
-config:
+#config:
   #dockerfile: .woloxci/Dockerfile
   #project_name: wolox-lab-dotnet
 
-services:
+#services:
   #- postgres
 
 steps:
-  build
-    - sh "echo hello"
+  build:
+    - echo hello
 
 environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
